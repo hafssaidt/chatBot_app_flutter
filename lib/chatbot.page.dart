@@ -14,6 +14,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
     {"message": "Hello", "type": "user"},
     {"message": "How can I assist you today?", "type": "assistant"},
   ];
+
   TextEditingController queryController = TextEditingController();
   ScrollController scrollController = ScrollController();
 
@@ -26,7 +27,6 @@ class _ChatBotPageState extends State<ChatBotPage> {
           style: TextStyle(color: Colors.white, fontFamily: 'Poppins'),
         ),
         backgroundColor: Theme.of(context).primaryColor,
-        toolbarHeight: 80.0, // OrangeRed
       ),
       body: Column(
         children: [
