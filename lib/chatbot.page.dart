@@ -12,7 +12,7 @@ class ChatBotPage extends StatefulWidget {
 class _ChatBotPageState extends State<ChatBotPage> {
   List messages = [
     {"message": "Hello", "type": "user"},
-    {"message": "How can I assist you today?", "type": "assistant"}
+    {"message": "How can I assist you today?", "type": "assistant"},
   ];
   TextEditingController queryController = TextEditingController();
   ScrollController scrollController = ScrollController();
@@ -23,9 +23,10 @@ class _ChatBotPageState extends State<ChatBotPage> {
       appBar: AppBar(
         title: Text(
           'GPT Chat',
-          style: TextStyle(color: Colors.white, fontFamily: 'Roboto'),
+          style: TextStyle(color: Colors.white, fontFamily: 'Poppins'),
         ),
-        backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: Theme.of(context).primaryColor,
+        toolbarHeight: 80.0, // OrangeRed
       ),
       body: Column(
         children: [
@@ -47,7 +48,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
                           backgroundColor: Colors.white,
                           child: Icon(
                             Icons.support_agent,
-                            color: Colors.deepPurpleAccent,
+                            color: Theme.of(context).primaryColor, // OrangeRed
                           ),
                         ),
                       if (isUser)
@@ -55,7 +56,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
                           backgroundColor: Colors.white,
                           child: Icon(
                             Icons.person,
-                            color: Colors.blueAccent,
+                            color: Theme.of(context).primaryColor,
                           ),
                         ),
                       SizedBox(width: 10),
@@ -63,7 +64,10 @@ class _ChatBotPageState extends State<ChatBotPage> {
                         padding: EdgeInsets.all(14),
                         constraints: BoxConstraints(maxWidth: 250),
                         decoration: BoxDecoration(
-                          color: isUser ? Colors.purple[100] : Colors.blue[100],
+                          color: isUser
+                              ? Color(0xFFFFC107)
+                              : Color(
+                                  0xFFFFE082), // Light Coral for User, Pale Peach for Assistant
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(
@@ -77,7 +81,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
                           messages[index]['message'],
                           style: TextStyle(
                             fontSize: 16,
-                            fontFamily: 'Roboto',
+                            fontFamily: 'Poppins',
                           ),
                         ),
                       ),
@@ -106,7 +110,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
                       contentPadding:
                           EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     ),
-                    style: TextStyle(fontFamily: 'Roboto'),
+                    style: TextStyle(fontFamily: 'Poppins'),
                   ),
                 ),
                 SizedBox(width: 10),
@@ -148,7 +152,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
                     queryController.text = '';
                   },
                   child: Icon(Icons.send, color: Colors.white),
-                  backgroundColor: Colors.deepPurpleAccent,
+                  backgroundColor: Theme.of(context).primaryColor, // OrangeRed
                   elevation: 5,
                 ),
               ],

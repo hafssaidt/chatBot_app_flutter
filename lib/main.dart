@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'GPT Chat',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primaryColor: Color(0xFF003366),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/': (context) => ChatBotPage(),
