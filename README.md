@@ -1,2 +1,2 @@
 # ChatBot App with Flutter & ChatGPT
-<img src="images/chatbot-screenshot.png" alt="ChatBot Screenshot" width="600"/>
+![ChatBot Screenshot](images/chatbot-screenshot.png)
