@@ -1,2 +1,3 @@
 # ChatBot App with Flutter & ChatGPT
-![ChatBot Screenshot](assets/chatbot-screenshot.png)
+<<<<<<< HEAD
+![ChatBot Screenshot](images/chatbot-screenshot.png)
